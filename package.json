@@ -6,14 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "node scripts/seed.mjs"
   },
   "dependencies": {
+    "@flags-sdk/vercel": "^1.4.4",
+    "@portabletext/react": "^3.2.4",
+    "@vercel/toolbar": "^0.2.6",
+    "flags": "^4.2.0",
     "next": "16.2.10",
+    "next-sanity": "^13.1.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "sanity": "^6.4.0",
+    "styled-components": "^6.4.3"
   },
   "devDependencies": {
+    "@sanity/cli": "^7.7.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

@@ -25,8 +25,8 @@ export default async function Home() {
       const fetched = await client.fetch<Post[]>(POSTS_QUERY, {}, { next: { revalidate: 60 } });
       if (fetched?.length) posts = fetched;
       // if empty, keep demo posts but mark configured so user knows it's connected
-    } catch (e: any) {
-      error = e?.message || "Failed to fetch from Sanity";
+    } catch (e: unknown) {
+      error = e instanceof Error ? e.message : "Failed to fetch from Sanity";
       configured = false;
     }
   }

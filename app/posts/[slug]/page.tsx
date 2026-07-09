@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -20,9 +21,9 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <article className="mx-auto max-w-2xl px-6 py-16">
-      <a href="/" className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100">
+      <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100">
         ← Back
-      </a>
+      </Link>
       <h1 className="mt-8 text-4xl font-semibold tracking-tight">{post.title}</h1>
       {post.publishedAt && (
         <p className="mt-2 text-sm text-zinc-500">

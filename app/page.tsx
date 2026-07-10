@@ -74,7 +74,7 @@ export default async function Home() {
               Next.js + Sanity starter
             </p>
             <h1 className="text-5xl font-semibold tracking-tight text-balance sm:text-6xl">
-              A tiny CMS demo with a polished front door.
+              A tiny CMS demo with a polished front door. Created by MAC!
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-700 dark:text-zinc-300">
               Publish posts from Sanity Studio, render them with Next.js, and keep the demo lightweight enough to understand in one sitting.

@@ -27,12 +27,6 @@ const DEMO_POSTS: Post[] = [
   },
 ];
 
-const SETUP_STEPS = [
-  "Create a free Sanity project and copy the project ID.",
-  "Add NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET to .env.local.",
-  "Open Studio, create a post, publish, then refresh the homepage.",
-];
-
 const FEATURES = [
   "Embedded Studio at /studio",
   "Post schema and GROQ queries included",
@@ -131,31 +125,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-8 px-6 py-12 lg:grid-cols-[0.8fr_1.2fr] lg:py-16">
-        <div className="rounded-[2rem] border border-black/10 bg-white/80 p-6 shadow-sm dark:border-white/10 dark:bg-white/10">
-          <h2 className="text-xl font-semibold">Launch checklist</h2>
-          <ol className="mt-5 space-y-4 text-sm text-zinc-700 dark:text-zinc-300">
-            {SETUP_STEPS.map((step, index) => (
-              <li key={step} className="flex gap-3">
-                <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-amber-200 text-xs font-bold text-amber-900 dark:bg-amber-300 dark:text-black">
-                  {index + 1}
-                </span>
-                <span>{step}</span>
-              </li>
-            ))}
-          </ol>
-          {!configured && (
-            <div className="mt-6 rounded-2xl bg-amber-50 p-4 text-sm text-amber-900 ring-1 ring-amber-200 dark:bg-amber-950/40 dark:text-amber-100 dark:ring-amber-900/60">
-              <p className="font-semibold">Currently showing demo content.</p>
-              <pre className="mt-3 overflow-x-auto rounded-xl bg-zinc-950 p-3 text-xs text-zinc-100">
-{`NEXT_PUBLIC_SANITY_PROJECT_ID=abc123xyz
-NEXT_PUBLIC_SANITY_DATASET=production`}
-              </pre>
-              {error && <p className="mt-3 text-xs text-red-600 dark:text-red-300">Error: {error}</p>}
-            </div>
-          )}
-        </div>
-
+      <section className="mx-auto max-w-6xl px-6 py-12 lg:py-16">
         <div id="posts" className="rounded-[2rem] border border-black/10 bg-white/80 p-6 shadow-sm dark:border-white/10 dark:bg-white/10">
           <div className="flex items-end justify-between gap-4">
             <div>
